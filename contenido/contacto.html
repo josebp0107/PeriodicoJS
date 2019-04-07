@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script type="text/javascript" src="../js/validacionFormulario.js"></script>
+    <title>Contacto</title>
+  </head>
+  <body>
+      <div id="contenedor">
+        <header id="encabezado">
+            <h1>Periodico</h1>
+        </header>
+
+        <nav id="menu">
+
+            <a class="itemMenu" href="../index.html">Noticias</a>
+            <a class="itemMenu" href="../contenido/novedadesTecnologicas.html">Novedades tecnologicas</a>
+            <a class="itemMenu" href="../contenido/contacto.html">Contacto</a>
+        </nav>
+
+        <div id="contactos">
+            <form  action="#" name="form" >
+                <fieldset>
+                  <legend>Datos personales</legend>
+                    <label for="nombre">Nombres *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre..." >
+
+                    <label for="apellido">Apellidos *</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellidos...">
+
+                    <label for="ciudad">Ciudad</label>
+                      <select id="ciudad" name="ciudad">
+                        <option value="Seleccione una ciudad">Seleccione una ciudad</option>
+                        <option value="Sincelejo">Sincelejo</option>
+                        <option value="Bogota">Bogotá</option>
+                        <option value="Medellin">Medellin</option>
+                        <option value="barranquilla">Barranquilla</option>
+                        <option value="monteria">Monteria</option>
+                        <option value="cali">Cali</option>
+                      </select>
+
+                      <input type="file" name="foto" value=""><br>
+
+                      <label for="comentario">Comentarios</label>
+                      <textarea name="comentario" rows="8" cols="80"></textarea>
+                </fieldset><br>
+                <fieldset>
+                <legend>Informacion Secundaria</legend>
+
+                <label for="check">Seleccione las noticias de su interes</label><br><br>
+                <input type="checkbox" name="deportes"> Deporte
+                <input type="checkbox" name="politica"> Politica
+                <input type="checkbox" name="tecnologia"> Tecnologia <br><br>
+
+                <label for="correo">Correo Electronico *</label>
+                <input type="email" id="correo"  placeholder="Correo Electronico..." >
+
+                <br>
+                <label for="radio">Desea que le enviemos a su correo noticias en exclusiva *</label><br><br>
+                <input type="radio" id="si" value="1">Si<br>
+                <input type="radio" id="no" value="2">No<br><br>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Ayudanos a mejorar</legend>
+
+                <label for="radio">Que mejoraria en la pagina (Presione Ctrl para seleccionar varias respuestas)</label><br><br>
+                  <select name="mejoras[]" multiple>
+                    <option value="1">Colores</option>
+                    <option value="2">Diseño</option>
+                    <option value="3">Organizacion de la informacion</option>
+                    <option value="4">Encabezado de la pagina</option>
+                  </select>
+                </fieldset>
+                <label for="agrupamientoOpciones">Seleccione un equipo o un jugador</label>
+                  <select name="agrupamientoOpciones">
+                    <optgroup label="equipo">
+                      <option value="1">Seleccione una opcion</option>
+                      <option value="2">Real madrid</option>
+                      <option value="3">Barcelona</option>
+                      <option value="4">Villareal</option>
+                      <option value="5">Malaga</option>
+
+                    </optgroup>
+                    <optgroup label="jugador">
+                      <option value="6">Cristiano Ronaldo</option>
+                      <option value="7">Messi</option>
+                      <option value="8">Ronaldo</option>
+                      <option value="9">Roberto Carlos</option>
+                    </optgroup>
+
+                  </select>
+
+                  <input type="submit" value="Enviar" onclick="validarNombre(); validarApellido(); validarSelectCiudad(); validarCorreo(form.correo.value); validarRadioButton();">
+                  <input type="reset" value="Borrar">
+
+            </form>
+
+        </div>
+
+
+
+      </div>
+
+  </body>
+</html>
